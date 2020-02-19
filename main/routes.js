@@ -7,12 +7,11 @@ const knexLogger = require("knex-logger");
 
 router.get('/GetUserName', function (req, res) {
     console.log("get user name");
-    res.json("test");
-    // knex.select().from("users").where('uid', '=', '1')
-    //     .then((results) => {
-    //         console.log(results[0]);
-    //         res.json(results[0]);
-    //     }).catch(err => console.error(err));
+    knex.select().from("users").where('uid', '=', '1')
+        .then((results) => {
+            console.log(results[0]);
+            res.json(results[0]);
+        }).catch(err => console.error(err));
 });
 
 module.exports = router;

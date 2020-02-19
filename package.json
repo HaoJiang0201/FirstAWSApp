@@ -2,6 +2,7 @@
     "name": "server",
     "version": "0.0.0",
     "private": true,
+    "homepage": ".",
     "scripts": {
         "start": "node ./app.js",
         "dev": "supervisor -i ./views ./app.js",
